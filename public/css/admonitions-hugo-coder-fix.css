@@ -1,0 +1,227 @@
+/* Fix for hugo-admonitions dark mode with Hugo Coder theme */
+/* Hugo Coder uses [data-colorscheme="dark"] and [data-colorscheme="auto"] */
+/* Using body selector for highest specificity to override vendor CSS */
+
+/* Base dark mode for all admonition types - Using !important to override vendor CSS */
+body[data-colorscheme="dark"] .admonition,
+body[data-colorscheme="auto"] .admonition {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(66, 66, 66, 0.3) !important;
+    color: #dadada !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+}
+
+body[data-colorscheme="dark"] .admonition {
+  background-color: rgba(66, 66, 66, 0.3) !important;
+  color: #dadada !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Admonition headers for dark mode */
+[data-colorscheme="dark"] .admonition-header,
+[data-colorscheme="auto"] .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    color: #dadada;
+  }
+}
+
+[data-colorscheme="dark"] .admonition-header {
+  color: #dadada;
+}
+
+/* Admonition content for dark mode */
+[data-colorscheme="dark"] .admonition-content,
+[data-colorscheme="auto"] .admonition-content {
+  @media (prefers-color-scheme: dark) {
+    background-color: transparent !important;
+    color: #dadada !important;
+  }
+}
+
+[data-colorscheme="dark"] .admonition-content {
+  background-color: transparent !important;
+  color: #dadada !important;
+}
+
+/* Override all specific admonition type background colors in dark mode */
+body[data-colorscheme="dark"] .admonition.note,
+body[data-colorscheme="dark"] .admonition.info,
+body[data-colorscheme="dark"] .admonition.notify,
+body[data-colorscheme="dark"] .admonition.tip,
+body[data-colorscheme="dark"] .admonition.success,
+body[data-colorscheme="dark"] .admonition.warning,
+body[data-colorscheme="dark"] .admonition.error,
+body[data-colorscheme="dark"] .admonition.danger,
+body[data-colorscheme="dark"] .admonition.important,
+body[data-colorscheme="dark"] .admonition.example,
+body[data-colorscheme="dark"] .admonition.question,
+body[data-colorscheme="dark"] .admonition.abstract,
+body[data-colorscheme="dark"] .admonition.caution {
+  background-color: rgba(66, 66, 66, 0.3) !important;
+  color: #dadada !important;
+}
+
+body[data-colorscheme="auto"] .admonition.note,
+body[data-colorscheme="auto"] .admonition.info,
+body[data-colorscheme="auto"] .admonition.notify,
+body[data-colorscheme="auto"] .admonition.tip,
+body[data-colorscheme="auto"] .admonition.success,
+body[data-colorscheme="auto"] .admonition.warning,
+body[data-colorscheme="auto"] .admonition.error,
+body[data-colorscheme="auto"] .admonition.danger,
+body[data-colorscheme="auto"] .admonition.important,
+body[data-colorscheme="auto"] .admonition.example,
+body[data-colorscheme="auto"] .admonition.question,
+body[data-colorscheme="auto"] .admonition.abstract,
+body[data-colorscheme="auto"] .admonition.caution {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(66, 66, 66, 0.3) !important;
+    color: #dadada !important;
+  }
+}
+
+/* Specific admonition type colors for dark mode */
+
+/* Note */
+[data-colorscheme="dark"] .admonition.note > .admonition-header,
+[data-colorscheme="auto"] .admonition.note > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #89b4fa;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.note > .admonition-header {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #89b4fa;
+}
+
+/* Info / Notify */
+[data-colorscheme="dark"] .admonition.info > .admonition-header,
+[data-colorscheme="dark"] .admonition.notify > .admonition-header,
+[data-colorscheme="auto"] .admonition.info > .admonition-header,
+[data-colorscheme="auto"] .admonition.notify > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(14, 165, 233, 0.2);
+    color: #38bdf8;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.info > .admonition-header,
+[data-colorscheme="dark"] .admonition.notify > .admonition-header {
+  background-color: rgba(14, 165, 233, 0.2);
+  color: #38bdf8;
+}
+
+/* Tip */
+[data-colorscheme="dark"] .admonition.tip > .admonition-header,
+[data-colorscheme="auto"] .admonition.tip > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(34, 197, 94, 0.2);
+    color: #4ade80;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.tip > .admonition-header {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+/* Success */
+[data-colorscheme="dark"] .admonition.success > .admonition-header,
+[data-colorscheme="auto"] .admonition.success > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.success > .admonition-header {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+/* Warning */
+[data-colorscheme="dark"] .admonition.warning > .admonition-header,
+[data-colorscheme="auto"] .admonition.warning > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.warning > .admonition-header {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+/* Error */
+[data-colorscheme="dark"] .admonition.error > .admonition-header,
+[data-colorscheme="auto"] .admonition.error > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.error > .admonition-header {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+/* Danger */
+[data-colorscheme="dark"] .admonition.danger > .admonition-header,
+[data-colorscheme="auto"] .admonition.danger > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(220, 38, 38, 0.2);
+    color: #ef4444;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.danger > .admonition-header {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #ef4444;
+}
+
+/* Important */
+[data-colorscheme="dark"] .admonition.important > .admonition-header,
+[data-colorscheme="auto"] .admonition.important > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.important > .admonition-header {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+/* Example */
+[data-colorscheme="dark"] .admonition.example > .admonition-header,
+[data-colorscheme="auto"] .admonition.example > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(139, 92, 246, 0.2);
+    color: #a78bfa;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.example > .admonition-header {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+}
+
+/* Question */
+[data-colorscheme="dark"] .admonition.question > .admonition-header,
+[data-colorscheme="auto"] .admonition.question > .admonition-header {
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(251, 191, 36, 0.2);
+    color: #fcd34d;
+  }
+}
+
+[data-colorscheme="dark"] .admonition.question > .admonition-header {
+  background-color: rgba(251, 191, 36, 0.2);
+  color: #fcd34d;
+}

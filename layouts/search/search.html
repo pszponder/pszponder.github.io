@@ -1,0 +1,199 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+
+{{ define "content" }}
+  <section class="container page">
+    <article>
+      <header>
+        <h1 class="title">
+          <a class="title-link" href="{{ .Permalink }}">
+            {{ .Title }}
+          </a>
+        </h1>
+      </header>
+
+      {{ .Content }}
+    </article>
+  </section>
+
+  <style>
+    #search-container {
+      margin: 2rem 0;
+    }
+    
+    #search-input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border: 2px solid var(--border-color);
+      border-radius: 6px;
+      background-color: var(--bg-color);
+      color: var(--fg-color);
+      margin-bottom: 1rem;
+    }
+    
+    #search-input:focus {
+      outline: none;
+      border-color: var(--link-color);
+    }
+    
+    #search-results {
+      margin-top: 2rem;
+    }
+    
+    .search-result {
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background-color: var(--alt-bg-color);
+    }
+    
+    .search-result h3 {
+      margin: 0 0 0.5rem 0;
+    }
+    
+    .search-result h3 a {
+      text-decoration: none;
+      color: var(--link-color);
+    }
+    
+    .search-result h3 a:hover {
+      text-decoration: underline;
+    }
+    
+    .search-result-meta {
+      font-size: 0.9rem;
+      color: var(--alt-fg-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .search-result-summary {
+      margin-bottom: 1rem;
+    }
+    
+    .search-result-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .search-result-tag {
+      background-color: var(--link-color);
+      color: var(--bg-color);
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+    
+    .search-result-tag:hover {
+      opacity: 0.8;
+    }
+    
+    .no-results {
+      text-align: center;
+      color: var(--alt-fg-color);
+      font-style: italic;
+      margin: 2rem 0;
+    }
+    
+    .search-stats {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--alt-fg-color);
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+  <script>
+    let fuse;
+    let searchData = [];
+
+    // Load search index
+    fetch('/index.json')
+      .then(response => response.json())
+      .then(data => {
+        searchData = data;
+        const options = {
+          keys: ['title', 'summary', 'contents', 'tags', 'categories'],
+          threshold: 0.3,
+          includeScore: true,
+          includeMatches: true
+        };
+        fuse = new Fuse(searchData, options);
+      })
+      .catch(error => {
+        console.error('Error loading search index:', error);
+      });
+
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+
+    let searchTimeout;
+
+    searchInput.addEventListener('input', function() {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        performSearch();
+      }, 300);
+    });
+
+    function performSearch() {
+      const query = searchInput.value.trim();
+      
+      if (!query) {
+        searchResults.innerHTML = '';
+        return;
+      }
+
+      if (!fuse) {
+        searchResults.innerHTML = '<div class="no-results">Search index is still loading...</div>';
+        return;
+      }
+
+      const results = fuse.search(query);
+      
+      if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No results found for "' + query + '"</div>';
+        return;
+      }
+
+      const resultsHtml = results.map(result => {
+        const item = result.item;
+        const score = Math.round((1 - result.score) * 100);
+        
+        // Format date
+        const date = new Date(item.date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+        
+        // Format tags
+        const tagsHtml = item.tags ? item.tags.map(tag => 
+          `<a href="/tags/${tag.toLowerCase()}" class="search-result-tag">${tag}</a>`
+        ).join('') : '';
+
+        return `
+          <div class="search-result">
+            <h3><a href="${item.permalink}">${item.title}</a></h3>
+            <div class="search-result-meta">${date} • Match: ${score}%</div>
+            <div class="search-result-summary">${item.summary}</div>
+            ${tagsHtml ? `<div class="search-result-tags">${tagsHtml}</div>` : ''}
+          </div>
+        `;
+      }).join('');
+
+      const statsHtml = `<div class="search-stats">Found ${results.length} result${results.length !== 1 ? 's' : ''} for "${query}"</div>`;
+      
+      searchResults.innerHTML = statsHtml + resultsHtml;
+    }
+
+    // Focus on search input when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      searchInput.focus();
+    });
+  </script>
+{{ end }}

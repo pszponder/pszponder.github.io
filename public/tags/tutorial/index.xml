@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on Piotr Szponder</title>
+    <link>//localhost:1313/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Piotr Szponder</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Aug 2025 04:05:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Your First Data Pipeline: A Practical Guide</title>
+      <link>//localhost:1313/posts/building-data-pipelines/</link>
+      <pubDate>Sat, 16 Aug 2025 04:05:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/building-data-pipelines/</guid>
+      <description>&lt;h1 id=&#34;building-your-first-data-pipeline-a-practical-guide&#34;&gt;&#xA;  Building Your First Data Pipeline: A Practical Guide&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#building-your-first-data-pipeline-a-practical-guide&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Data pipelines are the backbone of modern data-driven organizations. They&amp;rsquo;re the invisible highways that move data from source to destination, transforming it along the way to make it useful for analysis, reporting, and machine learning.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-a-data-pipeline&#34;&gt;&#xA;  What is a Data Pipeline?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-is-a-data-pipeline&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A data pipeline is an automated series of data processing steps that:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

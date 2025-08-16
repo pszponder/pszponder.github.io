@@ -1,0 +1,70 @@
+:root {
+  --bg-color: #eff1f5;
+  --fg-color: #4c4f69;
+  --alt-bg-color: #e6e9ef;
+  --alt-fg-color: #5c5f77;
+  --darker-alt-bg-color: #ccd0da;
+  --link-color: #1e66f5;
+  --border-color: #bcc0cc; }
+
+@media (prefers-color-scheme: dark) {
+  [data-colorscheme="dark"],
+  [data-colorscheme="auto"] {
+    --bg-color: #1e1e2e;
+    --fg-color: #cdd6f4;
+    --alt-bg-color: #181825;
+    --alt-fg-color: #bac2de;
+    --darker-alt-bg-color: #313244;
+    --link-color: #89b4fa;
+    --border-color: #45475a; } }
+
+[data-colorscheme="dark"] {
+  --bg-color: #1e1e2e;
+  --fg-color: #cdd6f4;
+  --alt-bg-color: #181825;
+  --alt-fg-color: #bac2de;
+  --darker-alt-bg-color: #313244;
+  --link-color: #89b4fa;
+  --border-color: #45475a; }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--fg-color); }
+
+.highlight {
+  background-color: var(--alt-bg-color) !important; }
+
+pre code {
+  background-color: var(--alt-bg-color);
+  color: var(--fg-color); }
+
+.navigation,
+.footer {
+  background-color: var(--alt-bg-color);
+  border-color: var(--border-color); }
+
+a {
+  color: var(--link-color); }
+  a:hover {
+    color: #8839ef; }
+  @media (prefers-color-scheme: dark) {
+    [data-colorscheme="dark"] a:hover, [data-colorscheme="auto"] a:hover {
+      color: #cba6f7; } }
+button,
+.button,
+input[type="submit"] {
+  background-color: #1e66f5;
+  color: #eff1f5;
+  border: none; }
+  button:hover,
+  .button:hover,
+  input[type="submit"]:hover {
+    background-color: #209fb5; }
+  @media (prefers-color-scheme: dark) {
+    [data-colorscheme="dark"] button, [data-colorscheme="auto"] button, [data-colorscheme="dark"] .button, [data-colorscheme="auto"] .button, [data-colorscheme="dark"] input[type="submit"], [data-colorscheme="auto"] input[type="submit"] {
+      background-color: #89b4fa;
+      color: #1e1e2e; }
+      [data-colorscheme="dark"] button:hover, [data-colorscheme="auto"] button:hover, [data-colorscheme="dark"] .button:hover, [data-colorscheme="auto"] .button:hover, [data-colorscheme="dark"] input[type="submit"]:hover, [data-colorscheme="auto"] input[type="submit"]:hover {
+        background-color: #74c7ec; } }
+
+/*# sourceMappingURL=custom.css.map */

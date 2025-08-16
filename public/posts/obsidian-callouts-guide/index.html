@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Obsidian-Style Callouts Now Available! · Piotr Szponder
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Piotr Szponder">
+<meta name="description" content="
+  Obsidian-Style Callouts Now Available!
+  
+    
+    Link to heading
+  
+
+Great news! This site now supports native Obsidian-style callouts using the excellent hugo-admonitions module. You can now write callouts exactly as you would in Obsidian!
+
+  Quick Start
+  
+    
+    Link to heading
+  
+
+Simply use the standard Obsidian syntax:
+
+[!NOTIFY]
+System notification: Your password will expire in 30 days.
+The above callout will render beautifully with proper styling and icons!">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Obsidian-Style Callouts Now Available!">
+  <meta name="twitter:description" content="Obsidian-Style Callouts Now Available! Link to heading Great news! This site now supports native Obsidian-style callouts using the excellent hugo-admonitions module. You can now write callouts exactly as you would in Obsidian!
+Quick Start Link to heading Simply use the standard Obsidian syntax:
+[!NOTIFY] System notification: Your password will expire in 30 days.
+The above callout will render beautifully with proper styling and icons!">
+
+<meta property="og:url" content="//localhost:1313/posts/obsidian-callouts-guide/">
+  <meta property="og:site_name" content="Piotr Szponder">
+  <meta property="og:title" content="Obsidian-Style Callouts Now Available!">
+  <meta property="og:description" content="Obsidian-Style Callouts Now Available! Link to heading Great news! This site now supports native Obsidian-style callouts using the excellent hugo-admonitions module. You can now write callouts exactly as you would in Obsidian!
+Quick Start Link to heading Simply use the standard Obsidian syntax:
+[!NOTIFY] System notification: Your password will expire in 30 days.
+The above callout will render beautifully with proper styling and icons!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-16T04:18:30+00:00">
+    <meta property="article:modified_time" content="2025-08-16T04:18:30+00:00">
+    <meta property="article:tag" content="Obsidian">
+    <meta property="article:tag" content="Callouts">
+    <meta property="article:tag" content="Admonitions">
+    <meta property="article:tag" content="Markdown">
+    <meta property="article:tag" content="Guide">
+
+
+
+
+<link rel="canonical" href="//localhost:1313/posts/obsidian-callouts-guide/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="//localhost:1313/">
+      Piotr Szponder
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/tags/">Tags</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/search/">Search</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="//localhost:1313/posts/obsidian-callouts-guide/">
+              Obsidian-Style Callouts Now Available!
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-08-16T04:18:30Z">
+                August 16, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/guide/">Guide</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/obsidian/">Obsidian</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/callouts/">Callouts</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/admonitions/">Admonitions</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/markdown/">Markdown</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/guide/">Guide</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="obsidian-style-callouts-now-available">
+  Obsidian-Style Callouts Now Available!
+  <a class="heading-link" href="#obsidian-style-callouts-now-available">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Great news! This site now supports <strong>native Obsidian-style callouts</strong> using the excellent <a href="https://github.com/KKKZOZ/hugo-admonitions"  class="external-link" target="_blank" rel="noopener">hugo-admonitions</a> module. You can now write callouts exactly as you would in Obsidian!</p>
+<h2 id="quick-start">
+  Quick Start
+  <a class="heading-link" href="#quick-start">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Simply use the standard Obsidian syntax:</p>
+<blockquote>
+<p>[!NOTIFY]
+System notification: Your password will expire in 30 days.</p></blockquote>
+<p>The above callout will render beautifully with proper styling and icons!</p>
+<h2 id="basic-callout-types">
+  Basic Callout Types
+  <a class="heading-link" href="#basic-callout-types">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Here are the most common callout types you can use:</p>
+<h3 id="information--notes">
+  Information &amp; Notes
+  <a class="heading-link" href="#information--notes">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>[!NOTE]
+This is a note callout - perfect for general information and context.</p></blockquote>
+<blockquote>
+<p>[!INFO]
+Use info callouts to provide helpful background information or explanations.</p></blockquote>
+<blockquote>
+<p>[!ABSTRACT]
+Abstract callouts are great for summaries and overviews.</p></blockquote>
+<h3 id="tips--guidance">
+  Tips &amp; Guidance
+  <a class="heading-link" href="#tips--guidance">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>[!TIP]
+Pro tips and helpful tricks go in tip callouts like this one!</p></blockquote>
+<blockquote>
+<p>[!IDEA]
+Got a creative idea? Share it with an idea callout.</p></blockquote>
+<blockquote>
+<p>[!GOAL]
+Use goal callouts to highlight objectives and targets.</p></blockquote>
+<h3 id="warnings--alerts">
+  Warnings &amp; Alerts
+  <a class="heading-link" href="#warnings--alerts">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>[!WARNING]
+Warning callouts alert readers about potential issues or important considerations.</p></blockquote>
+<blockquote>
+<p>[!CAUTION]
+Use caution callouts when readers need to be extra careful about something.</p></blockquote>
+<blockquote>
+<p>[!IMPORTANT]
+Mark critical information that readers absolutely must not miss.</p></blockquote>
+<h3 id="status-indicators">
+  Status Indicators
+  <a class="heading-link" href="#status-indicators">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>[!SUCCESS]
+Celebrate positive outcomes and completed tasks with success callouts.</p></blockquote>
+<blockquote>
+<p>[!ERROR]
+Document errors, failures, and problems that need attention.</p></blockquote>
+<blockquote>
+<p>[!DANGER]
+Use danger callouts for critical warnings about irreversible or harmful actions.</p></blockquote>
+<h2 id="custom-titles">
+  Custom Titles
+  <a class="heading-link" href="#custom-titles">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>You can customize the title of any callout:</p>
+<blockquote>
+<p>[!TIP] Pro Development Tip
+Always version control your configuration files - you&rsquo;ll thank yourself later!</p></blockquote>
+<blockquote>
+<p>[!WARNING] Breaking Change Alert
+Version 3.0 introduces breaking changes to the API. Please review the migration guide.</p></blockquote>
+<blockquote>
+<p>[!SUCCESS] Deployment Complete
+Your application has been successfully deployed to production!</p></blockquote>
+<h2 id="advanced-callout-types">
+  Advanced Callout Types
+  <a class="heading-link" href="#advanced-callout-types">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="technical-callouts">
+  Technical Callouts
+  <a class="heading-link" href="#technical-callouts">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>[!CODE]
+Use code callouts when sharing code snippets or technical examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">process_data</span>(data):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> data<span style="color:#ff7b72;font-weight:bold">.</span>clean()<span style="color:#ff7b72;font-weight:bold">.</span>validate()<span style="color:#ff7b72;font-weight:bold">.</span>transform()
+</span></span></code></pre></div></blockquote>
+<blockquote>
+<p>[!EXAMPLE]
+This is perfect for showing practical examples and use cases.</p></blockquote>
+<blockquote>
+<p>[!EXPERIMENT]
+Document experiments, tests, and hypothesis-driven development.</p></blockquote>
+<h3 id="interactive-elements">
+  Interactive Elements
+  <a class="heading-link" href="#interactive-elements">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>[!QUESTION]
+Got questions? Use question callouts for FAQs and inquiries.</p></blockquote>
+<blockquote>
+<p>[!TASK]
+Track action items and tasks that need to be completed.</p></blockquote>
+<blockquote>
+<p>[!MEMO]
+Quick memos and reminders can be highlighted this way.</p></blockquote>
+<h3 id="content-organization">
+  Content Organization
+  <a class="heading-link" href="#content-organization">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<blockquote>
+<p>[!QUOTE]
+&ldquo;The best way to predict the future is to create it.&rdquo; - Peter Drucker</p></blockquote>
+<blockquote>
+<p>[!CONCLUSION]
+Summarize key findings and final thoughts with conclusion callouts.</p></blockquote>
+<h2 id="complete-list-of-available-types">
+  Complete List of Available Types
+  <a class="heading-link" href="#complete-list-of-available-types">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Here are all the supported callout types:</p>
+<p><strong>Alerts &amp; Emphasis:</strong></p>
+<ul>
+<li><code>[!DANGER]</code> - Critical warnings</li>
+<li><code>[!ERROR]</code> - Errors and failures</li>
+<li><code>[!WARNING]</code> - Important warnings</li>
+<li><code>[!CAUTION]</code> - Careful attention needed</li>
+<li><code>[!IMPORTANT]</code> - Must-read information</li>
+<li><code>[!SUCCESS]</code> - Positive outcomes</li>
+</ul>
+<p><strong>Information &amp; Elaboration:</strong></p>
+<ul>
+<li><code>[!INFO]</code> - General information</li>
+<li><code>[!NOTE]</code> - Notes and context</li>
+<li><code>[!ABSTRACT]</code> - Summaries</li>
+<li><code>[!CONCLUSION]</code> - Final thoughts</li>
+<li><code>[!EXAMPLE]</code> - Examples and demos</li>
+<li><code>[!QUOTE]</code> - Quotes and references</li>
+</ul>
+<p><strong>Guidance &amp; Interaction:</strong></p>
+<ul>
+<li><code>[!TIP]</code> - Helpful tips</li>
+<li><code>[!TASK]</code> - Action items</li>
+<li><code>[!GOAL]</code> - Objectives</li>
+<li><code>[!IDEA]</code> - Creative thoughts</li>
+<li><code>[!QUESTION]</code> - Questions and FAQs</li>
+<li><code>[!NOTIFY]</code> - Notifications</li>
+<li><code>[!CODE]</code> - Code snippets</li>
+<li><code>[!EXPERIMENT]</code> - Tests and trials</li>
+<li><code>[!MEMO]</code> - Quick notes</li>
+</ul>
+<h2 id="benefits-for-technical-writing">
+  Benefits for Technical Writing
+  <a class="heading-link" href="#benefits-for-technical-writing">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>These callouts make technical content much more engaging and organized:</p>
+<blockquote>
+<p>[!TIP] Why Use Callouts?</p>
+<ul>
+<li><strong>Visual hierarchy</strong> - Guide reader attention</li>
+<li><strong>Better organization</strong> - Structure complex information</li>
+<li><strong>Improved readability</strong> - Break up large text blocks</li>
+<li><strong>Cross-platform compatibility</strong> - Works in Obsidian and Hugo</li>
+<li><strong>Professional appearance</strong> - Clean, modern styling</li>
+</ul></blockquote>
+<h2 id="compatibility-with-obsidian">
+  Compatibility with Obsidian
+  <a class="heading-link" href="#compatibility-with-obsidian">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The best part? These callouts use the <strong>exact same syntax</strong> as Obsidian! This means:</p>
+<ul>
+<li>✅ Copy and paste between Obsidian and your blog</li>
+<li>✅ No need to learn Hugo-specific shortcodes</li>
+<li>✅ Your existing Obsidian notes work immediately</li>
+<li>✅ Consistent workflow across tools</li>
+</ul>
+<h2 id="real-world-example">
+  Real-World Example
+  <a class="heading-link" href="#real-world-example">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Here&rsquo;s how you might use callouts in a technical blog post:</p>
+<blockquote>
+<p>[!INFO] Context
+We&rsquo;re building a data pipeline that processes customer events in real-time.</p></blockquote>
+<blockquote>
+<p>[!WARNING] Important Consideration
+Make sure your Kafka cluster can handle the expected throughput before deploying.</p></blockquote>
+<blockquote>
+<p>[!CODE] Implementation</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">process_events</span>(events):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> events<span style="color:#ff7b72;font-weight:bold">.</span>filter(valid)<span style="color:#ff7b72;font-weight:bold">.</span>transform(normalize)<span style="color:#ff7b72;font-weight:bold">.</span>save()
+</span></span></code></pre></div></blockquote>
+<blockquote>
+<p>[!SUCCESS] Result
+The pipeline now processes 10,000 events per second with 99.9% uptime!</p></blockquote>
+<h2 id="getting-started">
+  Getting Started
+  <a class="heading-link" href="#getting-started">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Want to use callouts in your own Hugo site? Check out the <a href="https://github.com/KKKZOZ/hugo-admonitions"  class="external-link" target="_blank" rel="noopener">hugo-admonitions</a> module - it&rsquo;s easy to install and works with any Hugo theme.</p>
+<blockquote>
+<p>[!TIP] Ready to Write?
+Start adding callouts to your technical posts today. Your readers will appreciate the improved organization and visual appeal!</p></blockquote>
+<hr>
+<p><em>Happy writing! 🎉</em></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Piotr Szponder 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

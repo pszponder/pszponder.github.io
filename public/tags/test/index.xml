@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on Piotr Szponder</title>
+    <link>//localhost:1313/tags/test/</link>
+    <description>Recent content in Test on Piotr Szponder</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Aug 2025 04:18:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Admonitions Test</title>
+      <link>//localhost:1313/posts/admonitions-test/</link>
+      <pubDate>Sat, 16 Aug 2025 04:18:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/admonitions-test/</guid>
+      <description>&lt;h1 id=&#34;testing-hugo-admonitions&#34;&gt;&#xA;  Testing Hugo Admonitions&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#testing-hugo-admonitions&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;This post tests the hugo-admonitions module for proper Obsidian-style callouts.&lt;/p&gt;&#xA;&lt;h2 id=&#34;basic-test&#34;&gt;&#xA;  Basic Test&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#basic-test&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;[!NOTIFY]&#xA;System notification: Your password will expire in 30 days.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;[!WARNING]&#xA;This is a warning message about something important.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;[!TIP]&#xA;This is a helpful tip for users.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;[!ERROR]&#xA;An error occurred while processing your request.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;custom-titles&#34;&gt;&#xA;  Custom Titles&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#custom-titles&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;[!INFO] Custom Information Title&#xA;This info callout has a custom title.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
