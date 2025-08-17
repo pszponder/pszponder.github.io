@@ -27,10 +27,14 @@
   color: var(--admonition-text) !important;
 }
 
-/* Make sure we don't override code blocks - they should use Hugo's colors */
-.admonition-content .highlight,
-.admonition-content .highlight * {
-  color: revert !important;
+/* Prevent code blocks from inheriting admonition text color */
+.admonition-content .highlight {
+  color: initial; /* Don't inherit from admonition-content */
+}
+
+/* Let Hugo's inline styles work for syntax highlighting */
+.admonition-content .highlight span[style*="color"] {
+  /* Hugo's inline styles will take precedence */
 }
 
 /* Callout accent colors - Catppuccin Mocha palette for dark mode */
@@ -139,6 +143,11 @@
 
 .admonition .highlight pre code {
   background: transparent;
-  /* Let Hugo handle all syntax highlighting colors via inline styles */
+  color: #e6edf3 !important; /* Ensure all code text is bright */
+}
+
+/* Make sure all spans without explicit colors get bright text */
+.admonition .highlight pre code span:not([style*="color"]) {
+  color: #e6edf3 !important; /* Bright text for non-highlighted elements */
 }
 
