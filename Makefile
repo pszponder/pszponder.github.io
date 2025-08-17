@@ -23,7 +23,7 @@ new: ## Create a new blog post (usage: make new <post-name>)
 		echo "Usage: make new <post-name>"; \
 		exit 1; \
 	fi
-	hugo new content/posts/$(filter-out $@,$(MAKECMDGOALS)).md
+	hugo new content/posts/$(filter-out $@,$(MAKECMDGOALS)).md --kind default
 
 new-tut: ## Create a new tutorial post (usage: make new-tutorial <post-name>)
 	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
