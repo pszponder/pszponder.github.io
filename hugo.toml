@@ -4,6 +4,12 @@ theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
+[module]
+[[module.imports]]
+path = "github.com/luizdepra/hugo-coder"
+[[module.imports]]
+path = "github.com/KKKZOZ/hugo-admonitions"
+
 
 
 [outputs]
@@ -38,11 +44,11 @@ since = 2025
 
 enableTwemoji = true
 
-colorScheme = "auto"
-hidecolorschemetoggle = false
+colorScheme = "dark"
+hidecolorschemetoggle = true
 
-# customCSS = ["css/custom.css"]
-# customSCSS = ["scss/custom.scss"]
+customCSS = ["css/admonitions-dark-mode.css"]
+customSCSS = ["scss/custom.scss"]
 # customJS = ["js/custom.js"]
 
 [taxonomies]

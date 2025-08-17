@@ -83,7 +83,19 @@ What is a Data Pipeline? Link to heading A data pipeline is an automated series 
 
 
  
+  
+    
+    <link rel="stylesheet" href="/css/admonitions-dark-mode.css" media="screen">
+  
 
+
+
+  
+  
+    
+    
+    <link rel="stylesheet" href="/scss/custom.css" media="screen">
+  
 
 
 
@@ -112,14 +124,8 @@ What is a Data Pipeline? Link to heading A data pipeline is an automated series 
 
 
 
-<body class="preload-transitions colorscheme-auto">
+<body class="preload-transitions colorscheme-dark">
   
-<div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-</div>
-
 
   <main class="wrapper">
     <nav class="navigation">
@@ -351,9 +357,14 @@ What is a Data Pipeline? Link to heading A data pipeline is an automated series 
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<blockquote>
-<p>[!TIP] Pro Tip: Error Handling
-Always implement comprehensive error handling in your data pipelines. Here&rsquo;s a robust pattern:</p>
+
+          <link rel="stylesheet" href="/css/vendors/admonitions.css">
+    <div class="admonition tip">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2c0 0 0 0 0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4c0 0 0 0 0 0c19.8 27.1 39.7 54.4 49.2 86.2l160 0zM192 512c44.2 0 80-35.8 80-80l0-16-160 0 0 16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></svg>
+        <span>Pro Tip: Error Handling</span>
+      </div>
+      <div class="admonition-content">
+        <p>Always implement comprehensive error handling in your data pipelines. Here&rsquo;s a robust pattern:</p>
 <div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#ff7b72">logging</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff7b72">def</span> <span style="color:#d2a8ff;font-weight:bold">safe_pipeline</span>():
@@ -364,8 +375,9 @@ Always implement comprehensive error handling in your data pipelines. Here&rsquo
 </span></span><span style="display:flex;"><span>        logging<span style="color:#ff7b72;font-weight:bold">.</span>error(<span style="color:#79c0ff">f</span><span style="color:#a5d6ff">&#34;Pipeline failed: </span><span style="color:#a5d6ff">{</span>str(e)<span style="color:#a5d6ff">}</span><span style="color:#a5d6ff">&#34;</span>)
 </span></span><span style="display:flex;"><span>        <span style="color:#8b949e;font-style:italic"># Send alert to monitoring system</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">raise</span>
-</span></span></code></pre></div></blockquote>
-<h3 id="-monitoring-and-logging">
+</span></span></code></pre></div>
+      </div>
+    </div><h3 id="-monitoring-and-logging">
   📊 Monitoring and Logging
   <a class="heading-link" href="#-monitoring-and-logging">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -492,16 +504,21 @@ Always implement comprehensive error handling in your data pipelines. Here&rsquo
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<blockquote>
-<p>[!WARNING] Common Mistakes to Watch Out For</p>
-<ul>
+
+    <div class="admonition warning">
+      <div class="admonition-header"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480L40 480c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24l0 112c0 13.3 10.7 24 24 24s24-10.7 24-24l0-112c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+        <span>Common Mistakes to Watch Out For</span>
+      </div>
+      <div class="admonition-content">
+        <ul>
 <li><strong>No error handling</strong>: Always plan for failures</li>
 <li><strong>Ignoring data quality</strong>: Garbage in, garbage out</li>
 <li><strong>Over-engineering</strong>: Start simple, add complexity when needed</li>
 <li><strong>Poor monitoring</strong>: You can&rsquo;t fix what you can&rsquo;t see</li>
 </ul>
-<p>These mistakes can lead to data corruption, system failures, and hours of debugging. Learn from others&rsquo; experience!</p></blockquote>
-<h2 id="next-steps">
+<p>These mistakes can lead to data corruption, system failures, and hours of debugging. Learn from others&rsquo; experience!</p>
+      </div>
+    </div><h2 id="next-steps">
   Next Steps
   <a class="heading-link" href="#next-steps">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>

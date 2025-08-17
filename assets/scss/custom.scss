@@ -57,35 +57,10 @@ $catppuccin-mocha-base: #1e1e2e;
 $catppuccin-mocha-mantle: #181825;
 $catppuccin-mocha-crust: #11111b;
 
-// Override default theme variables with Catppuccin colors
+// Override default theme variables with Catppuccin Dark colors
 :root {
-  // Light theme (Catppuccin Latte)
-  --bg-color: #{$catppuccin-latte-base};
-  --fg-color: #{$catppuccin-latte-text};
-  --alt-bg-color: #{$catppuccin-latte-mantle};
-  --alt-fg-color: #{$catppuccin-latte-subtext1};
-  --darker-alt-bg-color: #{$catppuccin-latte-surface0};
-  --link-color: #{$catppuccin-latte-blue};
-  --border-color: #{$catppuccin-latte-surface1};
-}
-
-[data-colorscheme="dark"],
-[data-colorscheme="auto"] {
-  @media (prefers-color-scheme: dark) {
-    // Dark theme (Catppuccin Mocha)
-    --bg-color: #{$catppuccin-mocha-base};
-    --fg-color: #{$catppuccin-mocha-text};
-    --alt-bg-color: #{$catppuccin-mocha-mantle};
-    --alt-fg-color: #{$catppuccin-mocha-subtext1};
-    --darker-alt-bg-color: #{$catppuccin-mocha-surface0};
-    --link-color: #{$catppuccin-mocha-blue};
-    --border-color: #{$catppuccin-mocha-surface1};
-  }
-}
-
-[data-colorscheme="dark"] {
-  // Dark theme (Catppuccin Mocha) - forced dark mode
-  --bg-color: #{$catppuccin-mocha-base};
+  // Dark theme only (Catppuccin Mocha) with Crust background
+  --bg-color: #{$catppuccin-mocha-crust};
   --fg-color: #{$catppuccin-mocha-text};
   --alt-bg-color: #{$catppuccin-mocha-mantle};
   --alt-fg-color: #{$catppuccin-mocha-subtext1};
@@ -101,14 +76,22 @@ body {
 }
 
 // Override code block colors for better Catppuccin integration
+// Only style the background, let Hugo's syntax highlighter handle text colors
 .highlight {
   background-color: var(--alt-bg-color) !important;
 }
 
-pre code {
+// Only set background for code blocks, don't override text colors
+pre {
   background-color: var(--alt-bg-color);
-  color: var(--fg-color);
 }
+
+pre code {
+  background-color: transparent;
+  // Don't override color - let Hugo's syntax highlighting work
+}
+
+
 
 // Style navigation and footer with Catppuccin colors
 .navigation,
@@ -122,14 +105,7 @@ a {
   color: var(--link-color);
   
   &:hover {
-    color: #{$catppuccin-latte-mauve};
-  }
-  
-  [data-colorscheme="dark"] &:hover,
-  [data-colorscheme="auto"] &:hover {
-    @media (prefers-color-scheme: dark) {
-      color: #{$catppuccin-mocha-mauve};
-    }
+    color: #{$catppuccin-mocha-mauve};
   }
 }
 
@@ -137,23 +113,11 @@ a {
 button,
 .button,
 input[type="submit"] {
-  background-color: #{$catppuccin-latte-blue};
-  color: #{$catppuccin-latte-base};
+  background-color: #{$catppuccin-mocha-blue};
+  color: #{$catppuccin-mocha-base};
   border: none;
   
   &:hover {
-    background-color: #{$catppuccin-latte-sapphire};
-  }
-  
-  [data-colorscheme="dark"] &,
-  [data-colorscheme="auto"] & {
-    @media (prefers-color-scheme: dark) {
-      background-color: #{$catppuccin-mocha-blue};
-      color: #{$catppuccin-mocha-base};
-      
-      &:hover {
-        background-color: #{$catppuccin-mocha-sapphire};
-      }
-    }
+    background-color: #{$catppuccin-mocha-sapphire};
   }
 }
