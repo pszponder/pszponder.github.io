@@ -4,12 +4,15 @@ theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
 
+[caches]
+[caches.images]
+dir = ":cacheDir/images"
+
 [module]
 [[module.imports]]
 path = "github.com/luizdepra/hugo-coder"
 [[module.imports]]
 path = "github.com/KKKZOZ/hugo-admonitions"
-
 
 
 [outputs]
@@ -47,7 +50,11 @@ enableTwemoji = true
 colorScheme = "dark"
 hidecolorschemetoggle = true
 
-customCSS = ["css/terminal-fonts.css", "css/admonitions-dark-mode.css", "css/theme-overrides.css"]
+customCSS = [
+    "css/terminal-fonts.css",
+    "css/admonitions-dark-mode.css",
+    "css/theme-overrides.css",
+]
 customSCSS = ["scss/custom.scss"]
 customJS = ["js/copy-code.js"]
 
