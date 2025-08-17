@@ -69,21 +69,27 @@ $catppuccin-mocha-crust: #11111b;
   --border-color: #{$catppuccin-mocha-surface1};
 }
 
-// Apply colors to body and main elements
+// Apply colors to body and main elements with higher specificity
 body {
   background-color: var(--bg-color);
   color: var(--fg-color);
 }
 
+body.colorscheme-dark,
+body.colorscheme-auto {
+  background-color: var(--bg-color) !important;
+  color: var(--fg-color) !important;
+}
+
 // Override code block colors for better Catppuccin integration
-// Only style the background, let Hugo's syntax highlighter handle text colors
+// Use a lighter background for better contrast against the dark body
 .highlight {
-  background-color: var(--alt-bg-color) !important;
+  background-color: var(--darker-alt-bg-color) !important; // Use surface0 for better contrast
 }
 
 // Only set background for code blocks, don't override text colors
 pre {
-  background-color: var(--alt-bg-color);
+  background-color: var(--darker-alt-bg-color); // Use surface0 for better contrast
 }
 
 pre code {
@@ -91,12 +97,28 @@ pre code {
   // Don't override color - let Hugo's syntax highlighting work
 }
 
+// Inline code should also use the lighter background
+code {
+  background-color: var(--darker-alt-bg-color) !important;
+  color: var(--fg-color) !important;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
 
 
-// Style navigation and footer with Catppuccin colors
-.navigation,
+
+// Style navigation and footer with Catppuccin colors - use specific selectors to override theme
+body.colorscheme-dark .navigation,
+body.colorscheme-auto .navigation,
+.navigation {
+  background-color: var(--alt-bg-color) !important;
+  border-color: var(--border-color);
+}
+
+body.colorscheme-dark .footer,
+body.colorscheme-auto .footer,
 .footer {
-  background-color: var(--alt-bg-color);
+  background-color: var(--bg-color) !important; // Match body background
   border-color: var(--border-color);
 }
 
@@ -120,4 +142,35 @@ input[type="submit"] {
   &:hover {
     background-color: #{$catppuccin-mocha-sapphire};
   }
+}
+
+// Override theme specificity for background colors
+body.colorscheme-dark {
+  background-color: var(--bg-color) !important;
+  color: var(--fg-color) !important;
+}
+
+body.colorscheme-auto {
+  background-color: var(--bg-color) !important;
+  color: var(--fg-color) !important;
+}
+
+body.colorscheme-dark .navigation {
+  background-color: var(--alt-bg-color) !important;
+  border-color: var(--border-color);
+}
+
+body.colorscheme-auto .navigation {
+  background-color: var(--alt-bg-color) !important;
+  border-color: var(--border-color);
+}
+
+body.colorscheme-dark .footer {
+  background-color: var(--bg-color) !important;
+  border-color: var(--border-color);
+}
+
+body.colorscheme-auto .footer {
+  background-color: var(--bg-color) !important;
+  border-color: var(--border-color);
 }

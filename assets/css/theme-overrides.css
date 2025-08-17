@@ -1,0 +1,112 @@
+/* High specificity overrides to match theme CSS */
+
+/* Body background overrides */
+body.colorscheme-dark,
+body.colorscheme-auto {
+  background-color: #11111b !important;
+  color: #cdd6f4 !important;
+}
+
+/* Footer background to match body */
+body.colorscheme-dark .footer,
+body.colorscheme-auto .footer {
+  background-color: #11111b !important;
+  border-color: #45475a !important;
+}
+
+/* Navigation background */
+body.colorscheme-dark .navigation,
+body.colorscheme-auto .navigation {
+  background-color: #181825 !important;
+  border-color: #45475a !important;
+}
+
+/* Code block backgrounds - use lighter color for better contrast */
+body.colorscheme-dark .highlight,
+body.colorscheme-auto .highlight {
+  background-color: #313244 !important;
+}
+
+body.colorscheme-dark pre,
+body.colorscheme-auto pre {
+  background-color: #313244 !important;
+}
+
+body.colorscheme-dark code,
+body.colorscheme-auto code {
+  background-color: #313244 !important;
+  color: #cdd6f4 !important;
+}
+
+/* Copy Code Button Styles */
+.code-block-container {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  background: #45475a;
+  border: 1px solid #585b70;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  color: #cdd6f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  min-height: 2rem;
+}
+
+.copy-code-button:hover {
+  background: #585b70;
+  border-color: #6c7086;
+  color: #89b4fa;
+  transform: scale(1.05);
+}
+
+.copy-code-button.copied {
+  background: #a6e3a1;
+  border-color: #a6e3a1;
+  color: #1e1e2e;
+}
+
+.copy-code-button:focus {
+  outline: 2px solid #89b4fa;
+  outline-offset: 2px;
+}
+
+/* Show button on hover */
+.code-block-container:hover .copy-code-button {
+  opacity: 1;
+}
+
+/* Always show on mobile/touch devices */
+@media (hover: none) {
+  .copy-code-button {
+    opacity: 0.7;
+  }
+  
+  .copy-code-button:hover {
+    opacity: 1;
+  }
+}
+
+/* Icon transitions */
+.copy-code-button svg {
+  transition: all 0.2s ease;
+  width: 16px;
+  height: 16px;
+}
+
+/* Ensure code blocks have proper spacing for button */
+.code-block-container pre {
+  margin: 0;
+  padding-right: 3rem;
+}
