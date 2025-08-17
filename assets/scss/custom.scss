@@ -69,6 +69,33 @@ $catppuccin-mocha-crust: #11111b;
   --border-color: #{$catppuccin-mocha-surface1};
 }
 
+// Terminal Font Stack - High-quality monospace fonts
+// Priority order: JetBrains Mono → Fira Code → Source Code Pro → System defaults
+$terminal-font-stack: 
+  'JetBrains Mono',
+  'Fira Code',
+  'Source Code Pro',
+  'SF Mono',
+  'Monaco',
+  'Inconsolata',
+  'Roboto Mono',
+  'Consolas',
+  'Liberation Mono',
+  'Menlo',
+  monospace;
+
+// Apply terminal fonts to the entire site
+body,
+html {
+  font-family: $terminal-font-stack;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  // Enable font ligatures for supported fonts (Fira Code, JetBrains Mono)
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
 // Apply colors to body and main elements with higher specificity
 body {
   background-color: var(--bg-color);

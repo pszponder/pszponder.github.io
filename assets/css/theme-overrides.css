@@ -21,21 +21,39 @@ body.colorscheme-auto .navigation {
   border-color: #45475a !important;
 }
 
-/* Code block backgrounds - use lighter color for better contrast */
+/* Code block backgrounds and typography - use lighter color for better contrast */
 body.colorscheme-dark .highlight,
 body.colorscheme-auto .highlight {
   background-color: #313244 !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
 }
 
 body.colorscheme-dark pre,
 body.colorscheme-auto pre {
   background-color: #313244 !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  padding: 1rem !important;
+  overflow-x: auto;
 }
 
 body.colorscheme-dark code,
 body.colorscheme-auto code {
   background-color: #313244 !important;
   color: #cdd6f4 !important;
+  font-size: 16px !important;
+}
+
+/* Inline code should match body text size */
+body.colorscheme-dark p code,
+body.colorscheme-dark li code,
+body.colorscheme-auto p code,
+body.colorscheme-auto li code {
+  font-size: 16px !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 3px !important;
+  background-color: #313244 !important;
 }
 
 /* Copy Code Button Styles */
@@ -109,4 +127,123 @@ body.colorscheme-auto code {
 .code-block-container pre {
   margin: 0;
   padding-right: 3rem;
+}
+
+/* Terminal Font Overrides - Apply to specific elements to avoid Font Awesome conflicts */
+body.colorscheme-dark p, body.colorscheme-dark div, body.colorscheme-dark span, body.colorscheme-dark a, body.colorscheme-dark li, 
+body.colorscheme-dark ul, body.colorscheme-dark ol, body.colorscheme-dark table, body.colorscheme-dark th, body.colorscheme-dark td,
+body.colorscheme-dark header, body.colorscheme-dark main, body.colorscheme-dark section, body.colorscheme-dark article, body.colorscheme-dark aside, body.colorscheme-dark nav, body.colorscheme-dark footer,
+body.colorscheme-dark blockquote, body.colorscheme-dark dt, body.colorscheme-dark dd, body.colorscheme-dark figcaption,
+body.colorscheme-auto p, body.colorscheme-auto div, body.colorscheme-auto span, body.colorscheme-auto a, body.colorscheme-auto li,
+body.colorscheme-auto ul, body.colorscheme-auto ol, body.colorscheme-auto table, body.colorscheme-auto th, body.colorscheme-auto td,
+body.colorscheme-auto header, body.colorscheme-auto main, body.colorscheme-auto section, body.colorscheme-auto article, body.colorscheme-auto aside, body.colorscheme-auto nav, body.colorscheme-auto footer,
+body.colorscheme-auto blockquote, body.colorscheme-auto dt, body.colorscheme-auto dd, body.colorscheme-auto figcaption {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Consolas', 'Liberation Mono', 'Menlo', monospace !important;
+}
+
+/* Comprehensive Font Awesome icon preservation for both color schemes */
+body.colorscheme-dark i[class*="fa"],
+body.colorscheme-dark i[class^="fa-"],
+body.colorscheme-dark i.fa,
+body.colorscheme-dark i.fas,
+body.colorscheme-dark i.far,
+body.colorscheme-dark i.fab,
+body.colorscheme-dark i.fal,
+body.colorscheme-dark i.fad,
+body.colorscheme-dark i.fa-solid,
+body.colorscheme-dark i.fa-regular,
+body.colorscheme-dark i.fa-brands,
+body.colorscheme-dark .fa,
+body.colorscheme-dark .fas,
+body.colorscheme-dark .far,
+body.colorscheme-dark .fab,
+body.colorscheme-dark .fal,
+body.colorscheme-dark .fad,
+body.colorscheme-dark .fa-solid,
+body.colorscheme-dark .fa-regular,
+body.colorscheme-dark .fa-brands,
+body.colorscheme-dark [class*="fa-"],
+body.colorscheme-dark [class^="fa-"],
+body.colorscheme-auto i[class*="fa"],
+body.colorscheme-auto i[class^="fa-"],
+body.colorscheme-auto i.fa,
+body.colorscheme-auto i.fas,
+body.colorscheme-auto i.far,
+body.colorscheme-auto i.fab,
+body.colorscheme-auto i.fal,
+body.colorscheme-auto i.fad,
+body.colorscheme-auto i.fa-solid,
+body.colorscheme-auto i.fa-regular,
+body.colorscheme-auto i.fa-brands,
+body.colorscheme-auto .fa,
+body.colorscheme-auto .fas,
+body.colorscheme-auto .far,
+body.colorscheme-auto .fab,
+body.colorscheme-auto .fal,
+body.colorscheme-auto .fad,
+body.colorscheme-auto .fa-solid,
+body.colorscheme-auto .fa-regular,
+body.colorscheme-auto .fa-brands,
+body.colorscheme-auto [class*="fa-"],
+body.colorscheme-auto [class^="fa-"] {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome" !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  display: inline-block !important;
+  text-rendering: auto !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-variant-ligatures: normal !important;
+  font-feature-settings: normal !important;
+}
+
+/* Headers should maintain terminal font but with appropriate weights */
+body.colorscheme-dark h1,
+body.colorscheme-dark h2,
+body.colorscheme-dark h3,
+body.colorscheme-dark h4,
+body.colorscheme-dark h5,
+body.colorscheme-dark h6,
+body.colorscheme-auto h1,
+body.colorscheme-auto h2,
+body.colorscheme-auto h3,
+body.colorscheme-auto h4,
+body.colorscheme-auto h5,
+body.colorscheme-auto h6 {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em;
+}
+
+/* Navigation elements */
+body.colorscheme-dark .navigation,
+body.colorscheme-auto .navigation {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace !important;
+  font-weight: 500;
+}
+
+/* Footer elements */
+body.colorscheme-dark .footer,
+body.colorscheme-auto .footer {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace !important;
+  font-size: 14px;
+}
+
+/* Content area */
+body.colorscheme-dark .content,
+body.colorscheme-auto .content {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace !important;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Form elements and buttons */
+body.colorscheme-dark input,
+body.colorscheme-dark textarea,
+body.colorscheme-dark select,
+body.colorscheme-dark button,
+body.colorscheme-auto input,
+body.colorscheme-auto textarea,
+body.colorscheme-auto select,
+body.colorscheme-auto button {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace !important;
 }

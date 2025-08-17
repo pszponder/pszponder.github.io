@@ -47,7 +47,7 @@ enableTwemoji = true
 colorScheme = "dark"
 hidecolorschemetoggle = true
 
-customCSS = ["css/admonitions-dark-mode.css", "css/theme-overrides.css"]
+customCSS = ["css/terminal-fonts.css", "css/admonitions-dark-mode.css", "css/theme-overrides.css"]
 customSCSS = ["scss/custom.scss"]
 customJS = ["js/copy-code.js"]
 
