@@ -1,13 +1,13 @@
 +++
 draft = false
-title = 'In Context Training'
+title = 'In-Context Training'
 date = '2025-08-17T17:34:37-06:00'
 author = "Piotr Szponder"
 tags = ["zero-shot", "one-shot", "multi-shot", "prompting"]
 categories = ["prompt-engineering", "ai-engineering", "ai", "ml"]
 +++
 
-# In-Context Learning
+# In-Context Training
 
 **In-Context Training** (i.e., _In-Context Learning_) is the process of giving a model instructions, examples, or other guiding information _inside the user prompt_. This additional information becomes part of the model's context window.
 
