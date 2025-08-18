@@ -1,5 +1,5 @@
 +++
-draft = true
+draft = false
 title = 'In Context Training'
 date = '2025-08-17T17:34:37-06:00'
 author = "Piotr Szponder"
