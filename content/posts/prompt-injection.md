@@ -3,8 +3,8 @@ draft = false
 title = 'Prompt Injection'
 date = '2025-08-22T18:33:22-06:00'
 author = "Piotr Szponder"
-tags = []
-categories = []
+tags = ["prompting"]
+categories = ["prompt-engineering", "ai", "ai-engineering"]
 +++
 
 # Prompt Injection
